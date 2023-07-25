@@ -14,3 +14,16 @@ model TabelaTest {
 
   @@map("tabela_test")
 }
+
+model OcorrenciaModel {
+  id          Int      @id @default(autoincrement())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  deletedAt   DateTime @default(now())
+  name        String
+  description String
+  lat         Float
+  lng         Float
+
+  @@map("ocorrencia")
+}
